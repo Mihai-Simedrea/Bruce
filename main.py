@@ -175,7 +175,6 @@ def MainProgram():
 
 
     def initialize_parameters_he(layers_dims):
-        # np.random.seed(3)
         parameters = {}
         L = len(layers_dims) - 1
         for l in range(1, L + 1):
@@ -249,8 +248,6 @@ def MainProgram():
 
         img_with_border = ImageOps.expand(img2, border=3, fill='black')
 
-        # img_with_border.save('image2.png')
-
         im = img_with_border.convert('1')
 
         output = Main(im)
@@ -272,8 +269,6 @@ def MainProgram():
         img2 = resizeimage.resize_contain(thumb, [22, 22], bg_color=(0, 0, 0))
 
         img_with_border = ImageOps.expand(img2, border=3, fill='black')
-
-        # img_with_border.save('image2.png')
 
         im = img_with_border.convert('1')
 
